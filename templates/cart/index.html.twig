@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{# BLOC TITLE #}
+{% block title %}Mon panier - Eloken{% endblock %}
+
+{# BLOC BODY #}
+{% block body %}
+    <div class="flex justify-center my-6">
+        <div class="rounded-lg flex flex-col w-full p-12 text-gray-800 bg-white max-w-4xl shadow-lg md:w-4/5 lg:w-4/5">
+            <div class="flex-1">
+                <table class="w-full text-sm lg:text-base" cellspacing="3">
+
+                    {# HAUT DU TABLEAU #}
+                    <thead>
+                    <tr class="h-12 subtitle-1">
+                        <th class=""></th>
+                        <th class="text-left">Produit</th>
+                        <th class="text-right">Prix HT</th>
+                        <th class="text-right">Prix TTC</th>
+                        <th class="text-right w-12"></th>
+                    </tr>
+                    </thead>
+                    <tbody class="divide-y divide-eloken-200">
+
+                    {# LIGNE PRODUIT #}
+                    {% for item in items %}
+                        <tr class="">
+
+                            {# IMAGE #}
+                            <td class="">
+                                <a href="#">
+                                    <div style="background-image: url('{{ item.product.mainPicture }}')" class="w-20 h-20 rounded my-5 rounded-lg"></div>
+                                </a>
+                            </td>
+                            <td class="text-left">
+                                <a href="#">
+                                    <p class="body-2">{{ item.product.name }}</p>
+                                </a>
+                            </td>
+                            <td class="text-right">
+                          <span class="body-2 ">
+                            {{ ((item.product.price / 100) / 1.2)|number_format(2, ',', ' ') }} €
+                          </span>
+                            </td>
+                            <td class="text-right">
+                          <span class="body-2">
+                            {{ (item.product.price / 100)|number_format(2, ',', ' ') }} €
+                          </span>
+                            </td>
+                            <td class="">
+                                <a href="{{ path('cart_delete', {'id' : item.product.id}) }}" class="w-6 h-6 flex items-center justify-center  mr-0 ml-auto">
+                                    <svg class="w-4 h-4" fill="none" stroke="red" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    {# LIGNE TOTAL #}
+                    <tr class="border-t-2 border-eloken-700">
+
+                        {# IMAGE #}
+                        <td class="">
+                            <p class="body-2 font-bold mt-5">Total</p>
+                        </td>
+                        <td class="">
+
+                        </td>
+                        <td class="text-right">
+                          <span class="body-2 font-bold block mt-5">
+                            {{ ((total / 100) / 1.2)|number_format(2, ',', ' ') }} €
+                          </span>
+                        </td>
+                        <td class="text-right">
+                          <span class="body-2 font-bold block mt-5">
+                            {{(total / 100)|number_format(2, ',', ' ') }} €
+                          </span>
+                        </td>
+                        <td class="">
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex justify-end">
+                <button class="btn-1 mt-12 inline-block text-white text-eloken-500">
+                    Continuer mes achats
+                </button>
+                <button class="btn-1 mt-12 bg-eloken-700 inline-block text-white hover:text-eloken-300">
+                    Payer
+                </button>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

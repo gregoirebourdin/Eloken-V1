@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+
+@layer base {
+
+    .title-1 {
+        @apply leading-relaxed text-8xl tracking-tighter font-semibold font-poppins;
+    }
+
+    .title-2 {
+        @apply leading-normal text-6xl tracking-tight font-semibold font-poppins;
+    }
+
+    .title-3 {
+        @apply leading-snug text-4xl font-medium font-poppins;
+    }
+
+    .title-4 {
+        @apply leading-snug text-2xl font-medium font-poppins;
+    }
+
+    .title-5 {
+        @apply leading-snug tracking-wide text-xl font-medium font-poppins;
+    }
+
+    .title-6 {
+        @apply leading-snug tracking-wide text-lg font-medium font-poppins;
+    }
+
+    .subtitle-1 {
+        @apply leading-none tracking-wider text-base font-medium font-poppins uppercase;
+    }
+
+    .subtitle-2 {
+        @apply leading-none tracking-widest text-xs font-medium font-poppins uppercase;
+    }
+
+    .body-1 {
+        @apply leading-normal tracking-wide text-xl font-normal font-openSans;
+    }
+
+    .body-2 {
+        @apply leading-normal tracking-wide text-base font-normal font-openSans;
+    }
+
+    .btn-1 {
+        @apply rounded-md p-5 font-poppins font-semibold leading-none tracking-wide text-center
+    }
+
+
+    .btn-2 {
+        @apply rounded-md p-5 font-poppins font-semibold leading-none tracking-wide text-center border-2 border-eloken-50 text-eloken-50 rounded-lg
+    }
+
+    .btn-3 {
+        @apply rounded-md p-5 font-poppins font-semibold leading-none tracking-wide text-center text-sm
+    }
+
+    .anchor-1 {
+        @apply leading-normal tracking-wide text-xl font-bold font-openSans;
+    }
+
+    .anchor-2 {
+
+    }
+
+    .price {
+
+    }
+
+
+    .active {
+        transition: width 900ms, height 900ms, margin 900ms, border-radius 900ms;
+        transition-timing-function: ease-in-out;
+    }
+
+    .laptop-size {
+        width: 800px;
+        height: 400px;
+        margin-top: 0px;
+        border-radius: 60% 40% 30% 70% / 65% 37% 63% 35%;
+    }
+
+    .tablet-size {
+        width: 670px;
+        height: 550px;
+        margin-top: -35px;
+        margin-left: 35px;
+        border-radius: 60% 40% 30% 70% / 65% 37% 63% 35%;
+    }
+
+    .phone-size {
+        width: 480px;
+        height: 480px;
+        margin-top: -50px;
+        margin-left: 80px;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    .grayscale {
+        filter: grayscale(1);
+        opacity: 0.3;
+    }
+    .grayscale2 {
+        filter: grayscale(1);
+        opacity: 0.5;
+    }
+
+
+    .scale-up-hor-left{animation:scale-up-hor-left .4s cubic-bezier(.39,.575,.565,1.000) both}
+
+    @keyframes scale-up-hor-left{0%{transform:scaleX(.4);transform-origin:0 0}100%{transform:scaleX(1);transform-origin:0 0}}
+
+    .vibrate-1 {
+        animation: vibrate-1 .3s linear infinite both
+    }
+
+    .animate-pings {
+        animation: pings 1s cubic-bezier(0, 0, 0.2, 1) forwards;
+    }
+
+    .animate-jumps {
+        animation: jumps 2.5s linear infinite both;
+    }
+    .wrapper-wave {
+        overflow: hidden;
+    }
+
+    .wave {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: -70%;
+        left: 50%;
+        border-radius: 40%;
+        animation: wave 8s infinite linear;
+    }
+
+    @keyframes wave {
+        from {
+            transform: rotate(0deg);
+        }
+        from {
+            transform: rotate(360deg);
+
+        }
+    }
+
+
+    @keyframes jumps {
+
+        0% {
+            transform: scale(1);
+        }
+        75% {
+            transform: scale(1);
+        }
+        85% {
+            transform: scale(0.95);
+
+        }
+        100% {
+            transform: scale(1);
+
+        }
+    }
+
+    @keyframes pings {
+
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+    @keyframes vibrate-1 {
+        0% {
+            transform: translate(0)
+        }
+        20% {
+            transform: translate(-2px, 2px)
+        }
+        40% {
+            transform: translate(-2px, -2px)
+        }
+        60% {
+            transform: translate(2px, 2px)
+        }
+        80% {
+            transform: translate(2px, -2px)
+        }
+        100% {
+            transform: translate(0)
+        }
+    }
+}
+
+
+@tailwind utilities;

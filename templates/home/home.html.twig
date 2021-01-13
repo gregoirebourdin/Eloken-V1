@@ -1,0 +1,209 @@
+{% extends 'base.html.twig' %}
+
+{# BLOC TITLE #}
+{% block title %}Des formations en ligne quand vous voulez, où vous voulez | Eloken{% endblock %}
+
+{# BLOC BODY #}
+{% block body %}
+
+    {# HERO SECTION #}
+    <main class="w-full max-w-7xl py-64 text-center mx-auto ">
+        <h1 class="title-1 eloken-700">
+            Hello, nous sommes Eloken.
+        </h1>
+        <p class="body-1 text-eloken-500">
+            Une (super) agence de Branding, design et développement web
+        </p>
+        <a href="">
+            <button class="btn-1 bg-redEloken-500 my-8 transform transition hover:-translate-y-1 hover:scale-95 hover:bg-redEloken-600 text-white">
+                M'inscrire
+            </button>
+        </a>
+
+    </main>
+
+    {# SECTION #1 #}
+    <section class="w-full max-w-7xl py-20 mx-auto mt-32" x-data="app()" x-cloak>
+        <div class="rounded-md w-12 duration-500 h-12" :style="`background: ${colorSelected}`">
+            <div class="w-full h-full flex justify-center items-center opacity-25 bg-gradient-to-br from-gray-100 to-gray-900 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
+                    <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140"
+                       style="mix-blend-mode: overlay;isolation: isolate">
+                        <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#fafafb"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        {# TEXT #1 #}
+        <p class="subtitle-1 duration-500 block mt-6 mb-3" :style="`color: ${colorSelected}`">
+            design sur-mesure
+        </p>
+        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+            Les goûts et les couleurs
+        </h2>
+        <p class="max-w-xl body-1 text-eloken-500">
+            Nous concevons le site qui répond à vos aspirations, vos envies, vos
+            gouts et vos couleurs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis tempor arcu nec
+            tempor
+        </p>
+        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer" :style="`color: ${colorSelected}`">
+            En savoir plus
+            <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+                <g id="streamline-icon-interface-arrows-right_140x140"
+                   data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill="`${colorSelected}`"/>
+                </g>
+            </svg>
+        </a>
+
+        {# ANIMATION COLOR #}
+        {% include 'shared/_animation-color.html.twig' %}
+    </section>
+
+    {# SECTION #2 #}
+    <section class="w-full max-w-7xl py-20 mx-auto mt-32">
+        <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-yellowEloken-300 to-yellowEloken-500 p-2 flex justify-center items-center">
+            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
+                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140"
+                   style="mix-blend-mode: overlay;isolation: isolate">
+                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
+                </g>
+            </svg>
+        </div>
+
+        {# TEXTE #2 #}
+        <p class="subtitle-1 text-yellowEloken-500 block mt-6 mb-3">
+            Mobile first
+        </p>
+        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+            Un design qui répond au doigt et à l'oeil
+        </h2>
+        <p class="max-w-xl body-1 text-eloken-500">
+            Un design au pixel près. Phasellus aliquam id dui at interdum.
+            Integer posuere placerat sem ut scelerisque. Fusce sit amet tincidunt nisl, non interdum magna.
+        </p>
+        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-yellowEloken-500">
+            En savoir plus
+            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+                <g id="streamline-icon-interface-arrows-right_140x140"
+                   data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"/>
+                </g>
+            </svg>
+        </a>
+
+        {# ANIMATION RESPONSIVE #}
+        {% include 'shared/_animation-responsive.html.twig' %}
+    </section>
+
+
+    {# CARD SECTION #}
+    <section class="my-64 bg-gradient-to-br from-yellowEloken-500 rounded-lg flex items-center justify-center mx-auto to-redEloken-500 p-12 relative w-full max-w-7xl">
+        <img class="w-full shadow-sm max-w-lg absolute -ml-8 mt-8 left-0 top-0 rounded-lg" src="{{ asset('images/Formations-en-ligne-pour-developper-son-entreprise.webp') }}">
+        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:-translate-y-1 -top-8 left-80"></div>
+        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:-translate-x-1 -bottom-16 left-24"></div>
+        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:translate-y-1 top-60 -right-8"></div>
+        <div class="max-w-md w-full"></div>
+
+        {# TEXT #}
+        <div class="my-8">
+            <h3 class="title-3 text-eloken-50 font-semibold">
+                Vous êtes prêt(e)s ?<br><span style="color:#7F1D1D;">Lancez-vous dès aujourd'hui.</span>
+            </h3>
+            <p class="body-1 max-w-sm text-eloken-50 mt-8">
+                Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin
+                commodo, nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna .
+            </p>
+            <a>
+                <button class="btn-2 mt-8 transform transition hover:-translate-y-1">Voir les formations</button>
+            </a>
+        </div>
+        <style>
+            .glass-effect {
+                background-color: rgba(255, 255, 255, 0.2);
+                box-shadow: 0px 3px 6px #00000029;
+                backdrop-filter: blur(10px) saturate(100%) contrast(60%) brightness(120%);
+                -webkit-backdrop-filter: blur(10px) saturate(100%) contrast(60%) brightness(120%);
+            }
+        </style>
+    </section>
+
+    <section class="w-full max-w-7xl py-20 mx-auto">
+        <div class="w-full grid grid-cols-3 gap-10 items-center justify-center">
+        {% for product in products %}
+            {% include "product/_product_card.html.twig" with {'p' : product} %}
+        {% endfor %}
+        </div>
+    </section>
+
+
+    {# SECTION #3 #}
+    <section class="w-full max-w-7xl py-20 mx-auto">
+        <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-greenEloken-300 to-greenEloken-500 p-2 flex justify-center items-center">
+            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
+                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140" style="mix-blend-mode: overlay;isolation: isolate">
+                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
+                </g>
+            </svg>
+        </div>
+
+        {# TEXT #3 #}
+        <p class="subtitle-1 text-greenEloken-500 block mt-6 mb-3">
+            Référencement google
+        </p>
+        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+            Besoin de visibilité ?
+            On&nbsp;gère&nbsp;...
+        </h2>
+        <p class="max-w-xl body-1 text-eloken-500">
+            Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin commodo,
+            nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna.
+        </p>
+        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-greenEloken-500">
+            En savoir plus
+            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+                <g id="streamline-icon-interface-arrows-right_140x140" data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill=""/>
+                </g>
+            </svg>
+        </a>
+
+        {# ANIMATION SEO #}
+    </section>
+
+    {# SECTION #4 #}
+    <section class="w-full max-w-7xl py-20 mx-auto">
+        <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-blueEloken-300 to-blueEloken-500 p-2 flex justify-center items-center">
+            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
+                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140" style="mix-blend-mode: overlay;isolation: isolate">
+                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
+                </g>
+            </svg>
+        </div>
+
+        {# TEXT #4 #}
+        <p class="subtitle-1 text-blueEloken-500 block mt-6 mb-3">
+            Base de données
+        </p>
+        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+            Prenez le contrôle !
+        </h2>
+        <p class="max-w-xl body-1 text-eloken-500">
+            Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin commodo,
+            nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna.
+        </p>
+        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-blueEloken-500">
+            En savoir plus
+            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+                <g id="streamline-icon-interface-arrows-right_140x140" data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill=""/>
+                </g>
+            </svg>
+        </a>
+
+        {# ANIMATION DATABASE STARTS #}
+
+    </section>
+
+{% endblock %}

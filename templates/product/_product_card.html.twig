@@ -1,0 +1,45 @@
+{# CARD FORMATION #}
+<div class="grid rounded-md shadow-lg">
+
+    {# IMAGE #}
+    <div style="background-image: url('{{ p.mainPicture }}')" class="w-full rounded-t-md h-64 bg-eloken-400"></div>
+
+    {# TEXT #}
+    <div class="py-7 px-6">
+        <div class="grid grid-cols-2 items-center mb-5">
+
+            {# CATEGORY #}
+            <div class="justify-self-start">
+                <span class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800">
+                  {{ p.category.name }}
+                </span>
+            </div>
+
+            {# PRIX #}
+            <div class="justify-self-end text-right">
+                <span class=" text-eloken-400 font-openSans">{{ p.price / 100 }} €</span>
+            </div>
+
+        </div>
+        <div class="grid gap-3 mb-5">
+
+            {# TITRE #}
+            <h3 class="title-4 text-eloken-700">{{p.name}}</h3>
+
+            {# DESCRIPTION #}
+            <p class="text-eloken-400">{{ p.shortDescription|slice(0, 80)}} ...</p>
+        </div>
+
+        {# BUTTONS #}
+        <div class="flex gap-3">
+            <a href="{{ path('cart_add', {'id' : p.id }) }}">
+                <button class="btn-3 bg-eloken-700 text-white">Ajouter au panier</button>
+            </a>
+            <a href="{{ path('product_show', {'category_slug' : p.category.slug, 'slug' : p.slug } ) }}">
+                <button class="btn-3 text-eloken-400">Voir la formation</button>
+            </a>
+
+        </div>
+    </div>
+</div>
+{# END CARD FORMATION #}

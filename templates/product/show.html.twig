@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{# BLOC TITLE #}
+{% block title %} {{ product.name }} {% endblock %}
+
+{# BLOC BODY #}
+{% block body %}
+
+    {# BREADCRUMB #}
+    <nav class="bg-white border-b border-t border-gray-200 flex" aria-label="Breadcrumb">
+        <ol class="max-w-screen-xl w-full mx-auto px-4 flex space-x-4 sm:px-6 lg:px-8">
+            <li class="flex">
+                <div class="flex items-center">
+                    <a href="{{ path('homepage') }}" class="text-gray-400 hover:text-gray-500">
+                        <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                        </svg>
+                        <span class="sr-only">Accueil</span>
+                    </a>
+                </div>
+            </li>
+            <li class="flex">
+                <div class="flex items-center">
+                    <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                    </svg>
+                    <a href="{{ path('product_category', {'slug' : product.category.slug }) }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ product.category.name }}</a>
+                </div>
+            </li>
+            <li class="flex">
+                <div class="flex items-center">
+                    <svg class="flex-shrink-0 w-6 h-full text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                    </svg>
+                    <a href="#" aria-current="page" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ product.name }}</a>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    {# HEADER #}
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
+            <div class="max-w-xl">
+                <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">{{ product.name }}</h2>
+            </div>
+        </div>
+    </div>
+
+    {# PRODUCT DETAILS #}
+    <div class="py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+            <div class="flex flex-col md:flex-row -mx-4">
+                <div class="md:flex-1 px-4">
+                    <div x-data="{ image: 1 }" x-cloak>
+                        <div class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4">
+                            <img x-show="image === 1"
+                                 class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center"
+                                 src="{{ product.mainPicture }}">
+
+                            <div x-show="image === 2"
+                                 class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                                <span class="text-5xl">2</span>
+                            </div>
+
+                            <div x-show="image === 3"
+                                 class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                                <span class="text-5xl">3</span>
+                            </div>
+
+                            <div x-show="image === 4"
+                                 class="h-64 md:h-80 rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
+                                <span class="text-5xl">4</span>
+                            </div>
+                        </div>
+
+                        <div class="flex -mx-2 mb-4">
+                            <template x-for="i in 4">
+                                <div class="flex-1 px-2">
+                                    <button x-on:click="image = i"
+                                            :class="{ 'ring-2 ring-indigo-300 ring-inset': image === i }"
+                                            class="focus:outline-none w-full rounded-lg h-24 md:h-32 bg-gray-100 flex items-center justify-center">
+                                        <span x-text="i" class="text-2xl"></span>
+                                    </button>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:flex-1 px-4">
+                    <h2 class="mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl">{{ product.name }}</h2>
+                    <p class="text-gray-500 text-sm">Par <a href="#" class="text-gray-600 hover:underline">{{ product.category.name }}</a></p>
+
+                    <div class="flex items-center space-x-4 my-4">
+                        <div>
+                            <div class="rounded-lg bg-gray-100 flex py-2 px-3">
+                                <span class="text-gray-400 mr-1 mt-1">€</span>
+                                <span class="font-bold text-gray-900 text-3xl">{{ product.price / 100 }}</span>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-gray-400 text-xl">
+                                <strike>{{ ((product.price / 100) + 65) }} €</strike>
+                            </p>
+                            <p class="text-gray-400 text-sm">Soit {{ ((product.price / 100) + 65) - (product.price / 100)  }}€ d'économisé.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-500">{{ product.shortDescription }}</p>
+
+                    <div class="flex py-4 space-x-4">
+                        <a href="{{ path('cart_add', {'id' : product.id }) }}">
+                            <button class="h-14 font-semibold text-white bg-gray-900 border-0 py-2 px-6 focus:outline-none hover:bg-gray-900 rounded">
+                                Ajouter au panier
+                            </button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
