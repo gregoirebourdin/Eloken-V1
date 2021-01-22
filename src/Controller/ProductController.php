@@ -39,7 +39,7 @@ class ProductController extends AbstractController
 
     /**
      * Display the Product details page.
-     * @Route("/{category_slug}/{slug}", name="product_show")
+     * @Route("/{category_slug}/{slug}", name="product_show", priority="-1")
      */
     public function show($slug, ProductRepository $productRepository)
     {

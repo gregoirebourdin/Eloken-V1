@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd470b55-c7d5-4d03-94b5-bfbd0e2ade39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/Purchase/PurchaseConfirmationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Purchase/PurchasesListController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/purchase/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201213155129.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201213171117.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201214092854.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201214110058.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20201214113458.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210110114635.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20210111144708.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Purchase.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PurchaseRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shared/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shared/_navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,10 +177,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../php/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../boutique" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -163,6 +189,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Examen\Eloken V1\src\Controller\Purchase" />
       <recent name="C:\xampp\htdocs\Examen\templates\product" />
       <recent name="C:\xampp\htdocs\Examen\src\Form" />
       <recent name="C:\xampp\htdocs\Examen\templates\category" />
@@ -265,6 +292,24 @@
       <workItem from="1610461507505" duration="57000" />
       <workItem from="1610461611163" duration="3962000" />
       <workItem from="1610473231798" duration="1049000" />
+      <workItem from="1610527644298" duration="1182000" />
+      <workItem from="1610532807660" duration="4293000" />
+      <workItem from="1610547809179" duration="764000" />
+      <workItem from="1610548849433" duration="4136000" />
+      <workItem from="1610553576139" duration="29000" />
+      <workItem from="1610553644847" duration="2033000" />
+      <workItem from="1610555763862" duration="132000" />
+      <workItem from="1610556003945" duration="886000" />
+      <workItem from="1610557518529" duration="613000" />
+      <workItem from="1610558480302" duration="290000" />
+      <workItem from="1610562446193" duration="523000" />
+      <workItem from="1610623061476" duration="203000" />
+      <workItem from="1610623459880" duration="4062000" />
+      <workItem from="1610631753931" duration="6725000" />
+      <workItem from="1610814831876" duration="75000" />
+      <workItem from="1610815925899" duration="92000" />
+      <workItem from="1610878377121" duration="27000" />
+      <workItem from="1611042894855" duration="29000" />
     </task>
     <servers />
   </component>

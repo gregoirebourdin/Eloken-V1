@@ -83,6 +83,33 @@
                     </tbody>
                 </table>
             </div>
+
+            {{ form_start(confirmationForm) }}
+            <form class="space-y-8 divide-y divide-gray-200">
+                <div class="space-y-8 divide-y divide-gray-200">
+                    <div>
+                        <div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                Formulaire de Livraison
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">
+                                This information will be displayed publicly so be careful what you share.
+                            </p>
+                        </div>
+                        <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                            <div class="sm:col-span-4">
+                                {{ form_label(confirmationForm) }}
+                                <div class="mt-1 flex rounded-md shadow-sm">
+                                    {{ form_widget(confirmationForm) }}
+                                </div>
+                                {{ form_help(confirmationForm) }}
+                                {{ form_errors(confirmationForm) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(confirmationForm) }}
+
             <div class="flex justify-end">
                 <button class="btn-1 mt-12 inline-block text-white text-eloken-500">
                     Continuer mes achats

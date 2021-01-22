@@ -1,6 +1,6 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
-    form_theme: [ 'tailwind_layout_form.html.twig' ]
+    form_theme: [ 'form/tailwind_layout_form.html.twig' ]
 
     globals:
         cartService: "@App\\Cart\\CartService"
