@@ -1,8 +1,10 @@
 <div class="full grid grid-cols-6 items-center h-auto" x-data="size()" x-cloak>
 
     <div class="col-span-2 grid grid-cols-1 gap-4 items-center justify-self-start justify-start">
+
+        {# ORDINATEUR #}
         <div @click="deviceSelected = '850px'"
-             class="flex cursor-pointer hover:translate-x-2 transform duration-500 flex-wrap gap-6 items-center justify-start subtitle-1">
+             class="flex cursor-pointer hover:translate-x-2 transform duration-500 flex-wrap gap-3 items-center justify-start subtitle-1">
             <div class="rounded-md duration-300 transition w-12 h-12 p-2 flex justify-center items-center bg-gradient-to-br from-yellowEloken-300 to-yellowEloken-500"
                  x-bind:class="{ 'grayscale2': deviceSelected != '850px' }">
                 <svg class="opacity-75" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -18,6 +20,8 @@
             </div>
             <span x-bind:class="{ 'text-yellowEloken-500': deviceSelected === '850px', 'text-eloken-300': deviceSelected != '850px' }">Ordinateur</span>
         </div>
+
+        {# TABLETTE #}
         <div @click="deviceSelected = '650px'"
              class="cursor-pointer transition hover:translate-x-2 transform duration-500 flex gap-3 items-center justify-start subtitle-1">
             <div class="rounded-md duration-300 transition w-12 h-12 p-2 flex justify-center items-center bg-gradient-to-br from-yellowEloken-300 to-yellowEloken-500"
@@ -80,11 +84,11 @@
 
 
     <div class="relative col-span-4 w-full p-6 flex items-center justify-center">
-        <div class="active absolute bg-gradient-to-br  from-yellowEloken-400 to-yellowEloken-600"
+        <div class="active absolute bg-gradient-to-br from-yellowEloken-500 to-redEloken-300 blur2"
              style=""
              x-bind:class="{ 'laptop-size': deviceSelected === '850px', 'tablet-size': deviceSelected === '650px', 'phone-size scale-110': deviceSelected === '280px' }"></div>
         <iframe src="http://www.mother-a-vengeance-awaits.com/eloken2"
-                class="active shadow-md overflow-hidden transform overflow-y-hidden overflow-x-hidden"
+                class="active shadow-xl rounded-xl overflow-hidden transform overflow-y-hidden overflow-x-hidden"
                 :style="`width: ${deviceSelected}`" height="450px"></iframe>
     </div>
 

@@ -4,7 +4,7 @@
 @layer base {
 
     .title-1 {
-        @apply leading-relaxed text-8xl tracking-tighter font-semibold font-poppins;
+        @apply leading-relaxed text-7xl tracking-tighter font-extrabold font-poppins leading-none;
     }
 
     .title-2 {
@@ -66,6 +66,10 @@
 
     .price {
 
+    }
+
+    .bg-1 {
+        background-image: url("./public/images/background/mesh-main-background.webp");
     }
 
 

@@ -17,6 +17,11 @@ module.exports = {
         'openSans': ['Open Sans', 'sans-serif'],
       },
 
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+
       colors: {
         'purpleEloken': {
           '50': '#f9f7ff',
@@ -93,7 +98,6 @@ module.exports = {
     },
   },
   plugins: [
-
     require('@tailwindcss/forms'),
 
   ],

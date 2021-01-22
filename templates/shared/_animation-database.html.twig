@@ -1,0 +1,91 @@
+<div class="grid relative grid-cols-7 items-center mx-auto overflow-visible max-w-4xl"
+     x-data="{inputTitle: 'Votre meilleur titre ici', switchOnOff: true }">
+
+    <div class="absolute left-1/2 top-1/2 duration-500 z-0  blur shape bg-gradient-to-br from-redEloken-500 to-yellowEloken-300"></div>
+
+    <div class="z-10 rounded-lg max-w-sm p-8 col-span-3 justify-self-end  bg-white transition-all duration-200 shadow-2xl bg-opacity-80" >
+
+        <div class="grid items-center">
+            <div class="">
+                <label class="block font-bold poppins mb-1">Modifiez vos contenus</label>
+                <input type="text" x-model='inputTitle' maxlength="25" x-bind:disabled="switchOnOff === false" :class="{'text-redEloken-500 bg-white': switchOnOff === true, 'text-eloken-300 bg-eloken-100': switchOnOff === false }"
+                       class="border border-transparent transition-all duration-200 shadow px-4 py-2 leading-normal  font-poppins  rounded-md focus:outline-none focus:shadow-outline"/>
+            </div>
+
+            <div class="mt-5">
+                <label class="block font-bold poppins mb-1">(Dés)activez vos pages</label>
+
+                <button type="button"  @click="switchOnOff = !switchOnOff"
+                        :class="{ 'bg-redEloken-500': switchOnOff === true, 'bg-eloken-300': switchOnOff === false }"
+                        class=" relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-redEloken-500">
+
+                    <span
+                          :class="{ 'translate-x-5': switchOnOff === true, 'translate-x-0': switchOnOff === false }"
+                          class="inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition ease-in-out duration-200">
+
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+    <svg class="col-span-1 z-10 animate-pulse" x-show.transition="switchOnOff === true"
+         xmlns="http://www.w3.org/2000/svg" width="100%" height="auto"
+         viewBox="0 0 85 7.376">
+        <path id="Tracé_123" data-name="Tracé 123"
+              d="M0-3.308S5.062-6.158,20.025-5.5,43.578-.677,59.851-.677,85-3.308,85-3.308V-.854S76.025,1.777,59.775,1.777,35.063-2.388,20.119-3.045,0-.854,0-.854Z"
+              transform="translate(0 5.599)" fill="#D4145A"/>
+    </svg>
+    </div>
+
+
+    <div class="flex justify-self-start col-span-3 ">
+        <div class="bg-white overflow-hidden z-10 rounded-lg shadow-lg mx-auto grid grid-cols-1 gap-2 transition duration-200 items-top" :class="{ 'bg-opacity-60': switchOnOff === true, 'bg-opacity-30': switchOnOff === false }"
+             style="width:242px; padding:23px; height: 421px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="196" height="134" viewBox="0 0 196 134">
+                <g id="Groupe_141" data-name="Groupe 141" transform="translate(-2258.352 -4855.345)">
+                    <g id="Groupe_140" data-name="Groupe 140" transform="translate(-49 -22)">
+                        <g id="Groupe_139" data-name="Groupe 139" transform="translate(1186.352 4348.345)">
+                            <rect id="Rectangle_939" data-name="Rectangle 939" width="49" height="10" rx="5"
+                                  transform="translate(1121 529)" fill="#fff" opacity="0.5"/>
+                            <rect id="Rectangle_940" data-name="Rectangle 940" width="17" height="10" rx="5"
+                                  transform="translate(1300 529)" fill="#fff"/>
+                            <rect id="Rectangle_945" data-name="Rectangle 945" width="17" height="10" rx="5"
+                                  transform="translate(1280 529)" fill="#fff"/>
+                            <rect id="Rectangle_946" data-name="Rectangle 946" width="17" height="10" rx="5"
+                                  transform="translate(1260 529)" fill="#fff"/>
+                            <g id="Groupe_78" data-name="Groupe 78" transform="translate(1120.643 571.343)"
+                               opacity="0.5">
+                                <path id="Soustraction_5" data-name="Soustraction 5"
+                                      d="M-17035.643,807.657h-156a19.866,19.866,0,0,1-14.141-5.858,19.87,19.87,0,0,1-5.859-14.142v-51a19.87,19.87,0,0,1,5.859-14.142,19.866,19.866,0,0,1,14.141-5.858h156a19.867,19.867,0,0,1,14.143,5.858,19.871,19.871,0,0,1,5.855,14.142v51a19.871,19.871,0,0,1-5.855,14.142A19.867,19.867,0,0,1-17035.643,807.657Zm-84.4-44.654a1.436,1.436,0,0,0-1,.4l-2.439,2.333a1.389,1.389,0,0,0-.434,1,1.414,1.414,0,0,0,1.426,1.4h17.23a1.457,1.457,0,0,0,.947-.35,1.364,1.364,0,0,0,.477-.96,1.381,1.381,0,0,0-.352-1.014l-5.992-6.652a.246.246,0,0,0-.02-.02.429.429,0,0,0-.049-.049,1.424,1.424,0,0,0-1-.406,1.44,1.44,0,0,0-1.016.414l-4.406,4.363a1.436,1.436,0,0,1-1.016.417,1.454,1.454,0,0,1-.682-.17l-.992-.531A1.46,1.46,0,0,0-17120.041,763Zm2.43-6.684a1.969,1.969,0,0,0-1.965,1.97,1.969,1.969,0,0,0,1.965,1.97,1.972,1.972,0,0,0,1.971-1.97A1.972,1.972,0,0,0-17117.611,756.319Z"
+                                      transform="translate(17212.002 -716)" fill="#fff"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="title-3 leading-tight text-redEloken-500 inline-block transition duration-200" :class="{ 'opacity-100': switchOnOff === true, 'opacity-60': switchOnOff === false }"
+                  x-text="inputTitle" style="overflow-wrap: break-word;">
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="178" height="47"
+                 viewBox="0 0 178 47">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="Rectangle_1137" data-name="Rectangle 1137" width="178" height="47"
+                              transform="translate(0.279 0.014)" fill="#fff"/>
+                    </clipPath>
+                </defs>
+                <g id="Groupe_142" data-name="Groupe 142" transform="translate(-0.279 -0.014)" opacity="0.5"
+                   clip-path="url(#clip-path)">
+                    <rect id="Rectangle_1134" data-name="Rectangle 1134" width="143" height="10" rx="5"
+                          transform="translate(0.279 37.014)" fill="#fff"/>
+                    <rect id="Rectangle_1135" data-name="Rectangle 1135" width="178" height="10" rx="5"
+                          transform="translate(0.279 19.014)" fill="#fff"/>
+                    <rect id="Rectangle_1136" data-name="Rectangle 1136" width="154" height="10" rx="5"
+                          transform="translate(0.279 1.014)" fill="#fff"/>
+                </g>
+            </svg>
+
+        </div>
+    </div>
+</div>

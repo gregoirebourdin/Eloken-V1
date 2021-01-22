@@ -7,67 +7,289 @@
 {% block body %}
 
     {# HERO SECTION #}
-    <main class="w-full max-w-7xl py-64 text-center mx-auto ">
-        <h1 class="title-1 eloken-700">
-            Hello, nous sommes Eloken.
-        </h1>
-        <p class="body-1 text-eloken-500">
-            Une (super) agence de Branding, design et développement web
-        </p>
-        <a href="">
-            <button class="btn-1 bg-redEloken-500 my-8 transform transition hover:-translate-y-1 hover:scale-95 hover:bg-redEloken-600 text-white">
-                M'inscrire
-            </button>
-        </a>
+    <div class="relative">
 
-    </main>
+        {# BLUR BACKGROUND #}
+
+        <div class="absolute bg-1 bg-cover z-0 inset-y top-1/3 right-96"></div>
+
+        <main class="w-full max-w-7xl grid grid-cols-2 py-64 min-h-screen text-left mx-auto ">
+
+            <div class="w-full">
+                <h1 class="title-1 text-eloken-700 leading-tight mb-14">
+                    Entrez dans l'ère digitale
+                </h1>
+                <p class="body-0 text-eloken-700">
+                    Hello, nous sommes Eloken, une (super) agence de branding, design et développement web
+                </p>
+                <div class="mt-8">
+                    <a class="" href="">
+                        <button class="btn-1 bg-redEloken-500  transform transition hover:-translate-y-1 hover:scale-95 hover:bg-redEloken-600 text-white">
+                            J'estime mon projet
+                        </button>
+                    </a>
+                    <a class="" href="">
+                        <button class="btn-1 mt-12 inline-block text-white text-eloken-400 transition hover:text-eloken-700">
+                            Voir les services
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+
+            <div>
+                {% include 'home/elements/hero_illustration_2.html.twig' %}
+                {% include 'home/elements/hero_illustration.html.twig' %}
+                {% include 'home/elements/hero_illustration_3.html.twig' %}
+            </div>
+
+            <a href="#Estimation-gratuite"
+               class="absolute animate-bounce bottom-32 right-1/2 transform -translate-x-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="20" height="20">
+                    <g transform="matrix(10,0,0,10,0,0)">
+                        <path d="M13.707,3.4a1,1,0,0,0-1.414,0L7.177,8.513a.25.25,0,0,1-.354,0L1.707,3.4A1,1,0,0,0,.293,4.811l5.646,5.647a1.5,1.5,0,0,0,2.122,0l5.646-5.647A1,1,0,0,0,13.707,3.4Z"
+                              fill="#000000" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="0"></path>
+                    </g>
+                </svg>
+            </a>
+        </main>
+
+    </div>
+
+    {# CARD SECTION #}
+    <a id="Estimation-gratuite"></a>
+    <section
+            class="mt-24 2mb-64 bg-gradient-to-br from-yellowEloken-500 rounded-2xl flex items-center justify-center mx-auto grid grid-cols-10 to-redEloken-500 items-center justify-start p-8 relative w-full max-w-7xl">
+        <img class=" col-span-4 col-start-1 transform  -translate-x-16 translate-y-16 row-start-1 w-full shadow-xl max-w-lg rounded-lg"
+             src="{{ asset('images/Formations-en-ligne-pour-developper-son-entreprise.webp') }}">
+
+        {# TEXT #}
+        <div class="col-span-6 col-start-5 6 w-full row-start-1">
+            <h3 class="title-3 text-eloken-50 font-semibold">
+                Vous avez un projet web ?<br><span style="color:#7F1D1D;">Estimez vos besoins dès aujourd'hui.</span>
+            </h3>
+            <p class="body-1 text-eloken-50 mt-8">
+                Lorsqu’on lance sur internet, il est nécessaire d’avoir à l’esprit l’ensemble des tâches critiques pour
+                la réussite de son projet digital : Référencement, rédaction, design, codage, communication … Nous avons
+                mis en place un simulateur qui vous permet d’estimer concrètement le coût d’un site internet en quelques
+                clics.
+            </p>
+            <a>
+                <button class="btn-2 mt-8 transform transition hover:-translate-y-1">Je fais le test</button>
+            </a>
+        </div>
+
+    </section>
+
+
 
     {# SECTION #1 #}
-    <section class="w-full max-w-7xl py-20 mx-auto mt-32" x-data="app()" x-cloak>
-        <div class="rounded-md w-12 duration-500 h-12" :style="`background: ${colorSelected}`">
-            <div class="w-full h-full flex justify-center items-center opacity-25 bg-gradient-to-br from-gray-100 to-gray-900 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
-                    <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140"
-                       style="mix-blend-mode: overlay;isolation: isolate">
-                        <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#fafafb"/>
+    <section class=" w-full items-center max-w-7xl py-20 grid grid-cols-2 mx-auto mt-32" x-data="app()" x-cloak>
+        <div>
+            <div class="rounded-md  w-12 duration-500 h-12" :style="`background: ${colorSelected}`">
+                <div class="w-full h-full rounded-md flex justify-center items-center opacity-50 bg-gradient-to-br from-gray-100 p-2">
+
+                    <svg class="" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="20">
+                        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                            <path d="M23.92,11.237A12.337,12.337,0,0,0,14.935.868,9.789,9.789,0,0,0,9.159.84a12.483,12.483,0,0,0-8.8,8.906A11.918,11.918,0,0,0,3.518,21.131a2.487,2.487,0,0,0,3.081.358,1.5,1.5,0,0,0,.256-2.334l-.809-.81a1,1,0,0,1,0-1.414,1.1,1.1,0,0,1,1.6-.189c1.41,1.409,5.62,5.656,5.622,5.657a3.985,3.985,0,0,0,2.815,1.183,3.751,3.751,0,0,0,1.928-.53A12.018,12.018,0,0,0,23.92,11.237Zm-9.443,7.626a2.506,2.506,0,0,1,0-3.537,2.562,2.562,0,0,1,3.535,0,2.5,2.5,0,1,1-3.535,3.537ZM14.245,7.2a2,2,0,0,1,2-2h0a2,2,0,1,1-2,2Zm3.7,6.01h0a1.5,1.5,0,1,1,2.121,0A1.5,1.5,0,0,1,17.942,13.205ZM11.649,4.72a2,2,0,1,1-2.827,0A2.048,2.048,0,0,1,11.649,4.72Z"
+                                  fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="0"></path>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            {# TEXT #1 #}
+            <p class="subtitle-1 duration-500 block mt-6 mb-3" :style="`color: ${colorSelected}`">
+                design sur-mesure
+            </p>
+            <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+                Les goûts et les couleurs
+            </h2>
+            <p class="max-w-xl body-1 text-eloken-600">
+                Nous concevons le site qui répond à vos aspirations, vos envies, vos gouts et vos couleurs. Le design
+                est le
+                support de votre interface. Il sert à susciter des émotions à vos visiteurs, rendre l’expérience client
+                plus
+                agréable et permet de vous démarquer grâce à une identité de marque forte.
+            </p>
+            <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer"
+               :style="`color: ${colorSelected}`">
+                En savoir plus
+                <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+                    <g id="streamline-icon-interface-arrows-right_140x140"
+                       data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                        <path id="Tracé_36" data-name="Tracé 36"
+                              d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"
+                              :fill="`${colorSelected}`"/>
+                    </g>
+                </svg>
+            </a>
+
+
+            {# ANIMATION COLOR #}
+            {% include 'shared/_animation-color.html.twig' %}
+    </section>
+
+    {# SECTION SEO #}
+    <section class=" w-full items-center max-w-7xl py-20 grid grid-cols-2 mx-auto">
+        <div>
+            <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-greenEloken-300 to-greenEloken-500 p-2 flex justify-center items-center">
+
+
+                <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="20">
+                    <g transform="matrix(14,0,0,14,0,0)">
+                        <path d="M9.78,9.78a.749.749,0,0,0,0-1.06l-1.9-1.9a.251.251,0,0,1-.034-.31A4.254,4.254,0,1,0,6.511,7.847a.25.25,0,0,1,.31.035l1.9,1.9a.748.748,0,0,0,1.06,0ZM1.5,4.25A2.75,2.75,0,1,1,4.25,7,2.752,2.752,0,0,1,1.5,4.25Z"
+                              fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="0"></path>
                     </g>
                 </svg>
             </div>
+
+            {# TEXT #3 #}
+            <p class="subtitle-1 text-greenEloken-500 block mt-6 mb-3">
+                Référencement google
+            </p>
+            <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+                Besoin de visibilité ?
+                On&nbsp;gère&nbsp;...
+            </h2>
+            <p class="max-w-xl body-1 text-eloken-500">
+                Internet est un espace hautement concurrentiel. Se démarquer et être visible sur la première page de
+                Google
+                est fondamental pour réussir votre stratégie digitale. Le référencement naturel est un travail préalable
+                qui
+                permet d’optimiser vos pages pour indiquer de manière claire et précise à l’algorithme de Google ce que
+                contiennent vos pages.
+            </p>
+            <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-greenEloken-500">
+                En savoir plus
+                <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12"
+                     viewBox="0 0 22.902 14.723">
+                    <g id="streamline-icon-interface-arrows-right_140x140"
+                       data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                        <path id="Tracé_36" data-name="Tracé 36"
+                              d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"
+                              :fill=""/>
+                    </g>
+                </svg>
+            </a>
         </div>
 
-        {# TEXT #1 #}
-        <p class="subtitle-1 duration-500 block mt-6 mb-3" :style="`color: ${colorSelected}`">
-            design sur-mesure
-        </p>
-        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
-            Les goûts et les couleurs
-        </h2>
-        <p class="max-w-xl body-1 text-eloken-500">
-            Nous concevons le site qui répond à vos aspirations, vos envies, vos
-            gouts et vos couleurs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis iaculis tempor arcu nec
-            tempor
-        </p>
-        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer" :style="`color: ${colorSelected}`">
-            En savoir plus
-            <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
-                <g id="streamline-icon-interface-arrows-right_140x140"
-                   data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
-                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill="`${colorSelected}`"/>
-                </g>
-            </svg>
-        </a>
 
-        {# ANIMATION COLOR #}
-        {% include 'shared/_animation-color.html.twig' %}
+        {# ANIMATION SEO #}
+        {% include 'shared/_animation-seo.html.twig' %}
     </section>
 
-    {# SECTION #2 #}
-    <section class="w-full max-w-7xl py-20 mx-auto mt-32">
+
+
+    {# SITE STARTER SECTION #}
+
+    <section class="my-56">
+        <h2 class="title-2 font-bold text-center text-eloken-700 font-semibold">
+            Un petit site pour<br><span class="text-purpleEloken-700 inline-block mb-12">vos grandes ambitions.</span>
+        </h2>
+        <p class="max-w-3xl body-1 text-eloken-600 text-center mx-auto">Faire un site peut être onéreux et chronophage.
+            Surtout lorsque l’on
+            débute et que l’on n’a pas des milliers d’euros à investir dans sa présence digitale. Alors on s’est dit
+            qu’on allait vous proposer un site tout prêt, facile à mettre en place, déjà designé et optimisé pour plaire
+            à vos clients. </p>
+
+        <div class="relative my-24">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1920.143 212.741">
+                <path id="Tracé_122" data-name="Tracé 122"
+                      d="M0-13.406S183.329,112.114,487.4,98.639s448.951-155.82,807.377-182.6,625.25,76.513,625.25,76.513V124.345H-.111C-.111-87.311,0-13.406,0-13.406Z"
+                      transform="translate(0.111 88.396)" fill="#F5F5F6"/>
+            </svg>
+            <div class="h-96 w-full bg-gradient-to-b from-eloken-100 to-eloken-50"></div>
+
+            <div class="absolute top-0 mx-auto px-64 left-auto right-auto grid grid-cols-2 items-center justify-center ">
+                <img src="{{ asset('images/illustration/starter-site.png') }}">
+
+                {# CARD FORMATION #}
+                <div class="grid grid-cols-1">
+
+                    <div class="w-full max-w-md h-64 row-start-1 col-start-1 mx-auto flex-none h-full rounded-xl transform bg-gradient-to-br from-purpleEloken-400 to-purpleEloken-600 rotate-12 "></div>
+
+
+                    <div class="relative row-start-1 col-start-1 grid rounded-md max-w-md shadow-lg bg-white mx-auto card">
+
+                        {# TEXT #}
+                        <div class="py-7 px-6">
+                            <div class="grid grid-cols-2 items-center mb-5">
+
+                                {# CATEGORY #}
+                                <div class="justify-self-start">
+                                <span class="inline-flex subtitle-2 items-center px-3 py-0.5 rounded-full text-sm font-medium bg-purpleEloken-100 text-purple-500">
+                                    Site internet
+                                </span>
+                                </div>
+
+                                {# PRIX #}
+                                <div class="justify-self-end text-right">
+                                    <span class="font-thin text-xl text-eloken-500 font-openSans">359 €</span>
+                                </div>
+                            </div>
+                            <div class="grid gap-3 mb-5">
+
+                                {# TITRE #}
+                                <h3 class="title-4 text-eloken-700">Site Starter</h3>
+
+                                {# DESCRIPTION #}
+                                <p class="text-eloken-400">Pour les entrepreneur(e)s qui se lancent et qui veulent
+                                    montrer leurs idées au monde entier. Choisissez un site tout simple, tout beau et
+                                    très puissant pour booster votre réussite !</p>
+                            </div>
+
+                            {# BUTTONS #}
+                            <div class="flex gap-3">
+                                <a href="" class="transform duration-300 hover:-translate-y-1">
+                                    <button class="btn-3 bg-eloken-700 text-white">J'en profite</button>
+                                </a>
+                                <a href="">
+                                    <button class="btn-3 text-eloken-400 hover:text-eloken-700 duration-300">Comparer les offres
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {# BADGES  STARTER SITE #}
+            {% include 'shared/_badges-starter-site.html.twig' %}
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+    {# SECTION RESPONSIVE #}
+    <section class="w-full max-w-7xl py-20 mx-auto">
         <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-yellowEloken-300 to-yellowEloken-500 p-2 flex justify-center items-center">
-            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
-                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140"
-                   style="mix-blend-mode: overlay;isolation: isolate">
-                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
+
+
+            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140"
+                 width="30">
+                <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
+                    <path d="M19.073,14.779l-5.079-1.823V7.5a2,2,0,0,0-4,0v8.461l-.826-1.138a1.545,1.545,0,0,0-1.2-.558l-.99.019a1.476,1.476,0,0,0-1.3,2.179l3.735,6.773A1.464,1.464,0,0,0,10.7,24h6.388a1.478,1.478,0,0,0,1.378-.989l1.519-6.68a.461.461,0,0,0,.013-.111A1.434,1.434,0,0,0,19.073,14.779Z"
+                          fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="0"></path>
+                    <path d="M6.1,11.9a1,1,0,0,0,.473-1.333A5.93,5.93,0,0,1,6,8,6,6,0,0,1,18,8a5.93,5.93,0,0,1-.577,2.57A1,1,0,0,0,17.9,11.9a1.023,1.023,0,0,0,1.333-.473A7.928,7.928,0,0,0,20,8,8,8,0,0,0,4,8a7.928,7.928,0,0,0,.771,3.43A1,1,0,0,0,6.1,11.9Z"
+                          fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="0"></path>
                 </g>
             </svg>
         </div>
@@ -79,16 +301,19 @@
         <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
             Un design qui répond au doigt et à l'oeil
         </h2>
-        <p class="max-w-xl body-1 text-eloken-500">
-            Un design au pixel près. Phasellus aliquam id dui at interdum.
-            Integer posuere placerat sem ut scelerisque. Fusce sit amet tincidunt nisl, non interdum magna.
+        <p class="max-w-2xl body-1 text-eloken-600">
+            54% du trafic internet mondial se fait sur mobile. Concevoir des interfaces responsives (c’est-à-dire qui
+            réponde à la taille de l’appareil) est devenu la norme lors de la conception de site internet. Convivialité,
+            ergonomie et facilité d’utilisation sont au cœur de la conception de l’expérience utilisateur.
         </p>
         <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-yellowEloken-500">
             En savoir plus
-            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
+            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12"
+                 viewBox="0 0 22.902 14.723">
                 <g id="streamline-icon-interface-arrows-right_140x140"
                    data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
-                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"/>
+                    <path id="Tracé_36" data-name="Tracé 36"
+                          d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"/>
                 </g>
             </svg>
         </a>
@@ -97,113 +322,111 @@
         {% include 'shared/_animation-responsive.html.twig' %}
     </section>
 
+    {# SECTION #DATABASE #}
+    <section class=" w-full items-center max-w-7xl py-20 mx-auto mt-32"
+             x-data="{ inputTitle: 'Votre meilleur titre ici' }">
+        <div>
+            <div>
+                <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-redEloken-300 to-redEloken-500 p-2 flex justify-center items-center">
 
-    {# CARD SECTION #}
-    <section class="my-64 bg-gradient-to-br from-yellowEloken-500 rounded-lg flex items-center justify-center mx-auto to-redEloken-500 p-12 relative w-full max-w-7xl">
-        <img class="w-full shadow-sm max-w-lg absolute -ml-8 mt-8 left-0 top-0 rounded-lg" src="{{ asset('images/Formations-en-ligne-pour-developper-son-entreprise.webp') }}">
-        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:-translate-y-1 -top-8 left-80"></div>
-        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:-translate-x-1 -bottom-16 left-24"></div>
-        <div class="glass-effect absolute w-24 h-24 rounded-lg transform transition hover:translate-y-1 top-60 -right-8"></div>
-        <div class="max-w-md w-full"></div>
+                    <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         xmlns:svgjs="http://svgjs.com/svgjs" viewBox="0 0 140 140" width="20" height="20">
+                        <g transform="matrix(10,0,0,10,0,0)">
+                            <path d="M7,10.5A11.582,11.582,0,0,1,.4,8.8.249.249,0,0,0,0,9v1.5C0,12.5,3.01,14,7,14s7-1.505,7-3.5V9a.249.249,0,0,0-.395-.2A11.582,11.582,0,0,1,7,10.5Z"
+                                  fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="0"></path>
+                            <path d="M7,0C3.01,0,0,1.505,0,3.5v2C0,7.5,3.01,9,7,9s7-1.5,7-3.5v-2C14,1.505,10.99,0,7,0ZM7,1.5c3.357,0,5.5,1.185,5.5,2s-2.143,2-5.5,2-5.5-1.185-5.5-2S3.643,1.5,7,1.5Z"
+                                  fill="#fff" stroke="none" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="0"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                {# TEXT #4 #}
+                <p class="subtitle-1 text-redEloken-500 block mt-6 mb-3">
+                    Base de données
+                </p>
+                <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
+                    Prenez le contrôle !
+                </h2>
+                <p class="max-w-xl body-1 text-eloken-500">
+                    L’heure est aux CMS (Content Management System). Cet anglicisme est la clé de voûte d’un site web
+                    dynamique
+                    et performant. Grâce aux bases de données et à l’intégration d’un tableau de bord, vous gardez le
+                    contrôle
+                    sur les contenus de votre site. Créez, éditez et supprimez vos contenus en quelques clics. Vous avez
+                    la
+                    maîtrise intégrale de votre site.
+                </p>
+                <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-redEloken-500">
+                    En savoir plus
+                    <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12"
+                         viewBox="0 0 22.902 14.723">
+                        <g id="streamline-icon-interface-arrows-right_140x140"
+                           data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
+                            <path id="Tracé_36" data-name="Tracé 36"
+                                  d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z"
+                            />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            {# ANIMATION DATABASE STARTS #}
+            {% include 'shared/_animation-database.html.twig' %}
+        </div>
+    </section>
+
+
+    {# CTA SECTION #}
+    <a id="Estimation-gratuite"></a>
+    <section
+            class="mt-24 2mb-64 bg-gradient-to-tr from-eloken-600 rounded-2xl flex items-center justify-center mx-auto grid grid-cols-10 to-eloken-700 items-center justify-start p-8 pl-16 relative w-full max-w-7xl">
+
 
         {# TEXT #}
-        <div class="my-8">
+        <div class="col-span-6 col-start-1 6 w-full row-start-1">
             <h3 class="title-3 text-eloken-50 font-semibold">
-                Vous êtes prêt(e)s ?<br><span style="color:#7F1D1D;">Lancez-vous dès aujourd'hui.</span>
+                Vous souhaitez vous lancer ?<br><span class="text-yellowEloken-500">Dites-nous tout.</span>
             </h3>
-            <p class="body-1 max-w-sm text-eloken-50 mt-8">
-                Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin
-                commodo, nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna .
+            <span class="inline-flex subtitle-2 mt-8 items-center px-3 py-0.5 rounded-full text-sm font-medium bg-eloken-500 text-eloken-700">30 minutes d'échanges offertes</span><br>
+            <p class="body-1 text-eloken-50 mt-8">
+                Vous lancez votre business en ligne ou souhaitez améliorer votre présence sur internet et vous avez une
+                multitude de question ? Echangeons à propos de vos objectifs et des solutions digitales qui
+                correspondent le mieux à vos ambitions lors d’un échange en visio-conférence.
             </p>
+
+
             <a>
-                <button class="btn-2 mt-8 transform transition hover:-translate-y-1">Voir les formations</button>
+                <button class="btn-2 mt-8 transform transition hover:-translate-y-1">Je prends RDV</button>
             </a>
         </div>
-        <style>
-            .glass-effect {
-                background-color: rgba(255, 255, 255, 0.2);
-                box-shadow: 0px 3px 6px #00000029;
-                backdrop-filter: blur(10px) saturate(100%) contrast(60%) brightness(120%);
-                -webkit-backdrop-filter: blur(10px) saturate(100%) contrast(60%) brightness(120%);
-            }
-        </style>
+
+        <img class=" col-span-4 col-start-7 transform  translate-x-16 translate-y-16 row-start-1 w-full shadow-xl max-w-lg rounded-lg"
+             src="{{ asset('images/photos/echange-tel.webp') }}">
+
     </section>
 
+{# SITE STARTER SECTION #}
+
+<section class="my-64">
+    <h2 class="title-2 font-bold text-center text-eloken-700 font-semibold">
+        Il y en aura <span class="text-greenEloken-500 inline-block mb-12">pour tout le monde</span>
+    </h2>
+    {% include 'shared/_badges-list-services.html.twig' %}
+
+</section>
+
+    {# CARDS #}
     <section class="w-full max-w-7xl py-20 mx-auto">
         <div class="w-full grid grid-cols-3 gap-10 items-center justify-center">
-        {% for product in products %}
-            {% include "product/_product_card.html.twig" with {'p' : product} %}
-        {% endfor %}
+            {% for product in products %}
+                {% include "product/_product_card.html.twig" with {'p' : product} %}
+            {% endfor %}
         </div>
     </section>
 
 
-    {# SECTION #3 #}
-    <section class="w-full max-w-7xl py-20 mx-auto">
-        <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-greenEloken-300 to-greenEloken-500 p-2 flex justify-center items-center">
-            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
-                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140" style="mix-blend-mode: overlay;isolation: isolate">
-                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
-                </g>
-            </svg>
-        </div>
-
-        {# TEXT #3 #}
-        <p class="subtitle-1 text-greenEloken-500 block mt-6 mb-3">
-            Référencement google
-        </p>
-        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
-            Besoin de visibilité ?
-            On&nbsp;gère&nbsp;...
-        </h2>
-        <p class="max-w-xl body-1 text-eloken-500">
-            Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin commodo,
-            nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna.
-        </p>
-        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-greenEloken-500">
-            En savoir plus
-            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
-                <g id="streamline-icon-interface-arrows-right_140x140" data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
-                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill=""/>
-                </g>
-            </svg>
-        </a>
-
-        {# ANIMATION SEO #}
-    </section>
-
-    {# SECTION #4 #}
-    <section class="w-full max-w-7xl py-20 mx-auto">
-        <div class="rounded-md w-12 duration-500 h-12 bg-gradient-to-br  from-blueEloken-300 to-blueEloken-500 p-2 flex justify-center items-center">
-            <svg class="opacity-50" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 30.837 51.396">
-                <g id="streamline-icon-food-ice-cream_140x140" data-name="streamline-icon-food-ice-cream@140x140" style="mix-blend-mode: overlay;isolation: isolate">
-                    <path id="Tracé_11" data-name="Tracé 11" d="M58.437,11.939a2.57,2.57,0,0,0-3.243-1.881A5.232,5.232,0,0,1,48.558,5.14a5.181,5.181,0,0,1,.221-1.49A2.57,2.57,0,0,0,46.893.4,15.665,15.665,0,0,0,43.419,0,15.419,15.419,0,0,0,28,15.419V33.407a5.14,5.14,0,0,0,5.14,5.14h5.14a1.285,1.285,0,0,1,1.285,1.285v7.709a3.855,3.855,0,1,0,7.709,0V39.832a1.285,1.285,0,0,1,1.285-1.285H53.7a5.14,5.14,0,0,0,5.14-5.14V15.419A15.352,15.352,0,0,0,58.437,11.939Z" transform="translate(-28)" fill="#ffffff"/>
-                </g>
-            </svg>
-        </div>
-
-        {# TEXT #4 #}
-        <p class="subtitle-1 text-blueEloken-500 block mt-6 mb-3">
-            Base de données
-        </p>
-        <h2 class="title-2 text-eloken-700 max-w-3xl mb-8 inline-block">
-            Prenez le contrôle !
-        </h2>
-        <p class="max-w-xl body-1 text-eloken-500">
-            Nunc pharetra eros arcu, at aliquet nisl efficitur et. Proin commodo,
-            nibh eget hendrerit luctus, felis libero volutpat sem, id suscipit diam orci a urna.
-        </p>
-        <a class="anchor-1 mt-8 block max-w-sm flex items-center transform transition hover:translate-x-1 cursor-pointer text-blueEloken-500">
-            En savoir plus
-            <svg class="ml-3 fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 22.902 14.723">
-                <g id="streamline-icon-interface-arrows-right_140x140" data-name="streamline-icon-interface-arrows-right@140x140" transform="translate(0 -25)">
-                    <path id="Tracé_36" data-name="Tracé 36" d="M16.7,25.479,22.423,31.2a1.636,1.636,0,0,1,0,2.313L16.7,39.244a1.636,1.636,0,1,1-2.313-2.313L16.619,34.7a.409.409,0,0,0-.29-.7H1.636a1.636,1.636,0,1,1,0-3.272H16.329a.409.409,0,0,0,.29-.7l-2.235-2.235A1.636,1.636,0,1,1,16.7,25.479Z" :fill=""/>
-                </g>
-            </svg>
-        </a>
-
-        {# ANIMATION DATABASE STARTS #}
-
-    </section>
 
 {% endblock %}
